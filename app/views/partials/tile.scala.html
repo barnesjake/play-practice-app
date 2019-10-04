@@ -1,0 +1,14 @@
+@(heading: String, introText: Option[String] = None, normalText: Option[String] = None, something: Option[Html] = None, tileSize: String = "third")
+
+<div class="w3-@tileSize">
+    <div class="w3-card w3-container w3-margin-top" style="min-height: 460px">
+        <h3>@heading</h3><br>
+        <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size: 120px"></i>
+        @if(introText.getOrElse(None) != None) {
+        <p>@introText</p>
+    }
+        @if(normalText.getOrElse(None) != None) {
+            <p>@normalText</p>
+        }
+    </div>
+</div>

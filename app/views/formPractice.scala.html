@@ -1,0 +1,18 @@
+@()
+
+@main("Practicing using forms!") {
+    @partials.sidebar()
+    @partials.header()
+} {
+    <div class="w3-row-padding w3-center">
+
+        @partials.tile(
+            heading = "this is a test",
+            introText = Some("Partials example Partials example Partials example Partials example Partials example Partials example Partials example"),
+            normalText = None,
+            something = None,
+            tileSize = "col"
+        )
+
+    </div>
+}
