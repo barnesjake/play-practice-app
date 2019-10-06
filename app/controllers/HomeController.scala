@@ -22,5 +22,25 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.index())
   }
 
+  def formPracticePage(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.formPractice())
+  }
+
+  def getHttpProgrammingPage: Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.httpProgramming())
+  }
+
+  def getAdvHttpProgrammingPage: Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.advHttpProgramming())
+  }
+
+  def getConfigApiPage: Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.configApi())
+  }
+
+  def getTwirlTemplatesPage: Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.twirlTemplates())
+  }
+
 
 }

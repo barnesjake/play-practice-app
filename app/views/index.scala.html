@@ -9,37 +9,95 @@
 
     @partials.modal(
         List(
-            Some("Oh snap! We just showed you a modal.."),
-            Some("Because we can"))
+            Some("This application is to help me learn the Play framework using Scala"),
+            Some("It follows the documentation on the play website: https://www.playframework.com/documentation/2.7.x/ScalaHome"))
     )
 
     <div class="w3-row-padding w3-center">
 
-        @partials.tile(
-            heading = "this is a test",
-            introText = Some("Partials example Partials example Partials example Partials example Partials example Partials example Partials example")
-        )
+        @partials.tile(heading = "HTTP programming") {
+            <ol>
+                <li>Actions, Controllers and Results</li>
+                <li>HTTP Routing</li>
+                <li>Manipulating results</li>
+                <li>Session and Flash scopes</li>
+                <li>Body parsers</li>
+                <li>Actions composition</li>
+                <li>Content negotiation</li>
+                <li>Handling errors</li>
+            </ol>
+            <button class="w3-btn w3-small w3-theme-dark w3-hover-blue-gray">
+                <a href="@routes.HomeController.getHttpProgrammingPage()">
+                    Check it out
+                </a>
+            </button>
+        }
 
-        @partials.tile(
-            heading = "this is a test",
-            introText = Some("Partials example Partials example Partials example Partials example Partials example Partials example Partials example")
-        )
+        @partials.tile(heading = "Asynchronous HTTP programming") {
+            <ol>
+                <li>Asynchronous results</li>
+                <li>Streaming HTTP responses</li>
+                <li>Comet</li>
+                <li>WebSockets</li>
+            </ol>
+            <button class="w3-btn w3-small w3-theme-dark w3-hover-blue-gray">
+                <a href="@routes.HomeController.getAdvHttpProgrammingPage()">
+                    Check it out
+                </a>
+            </button>
+        }
 
-        @partials.tile(
-            heading = "this is a test",
-            introText = Some("Partials example Partials example Partials example Partials example Partials example Partials example Partials example"),
-            normalText = Some("some extra text")
-        )
+        @partials.tile(heading = "Forms") {
+            <ol>
+                <li>Handling form submission</li>
+                <li>Protecting against CSRF</li>
+                <li>Custom Validations</li>
+                <li>Custom Field Constructors</li>
+            </ol>
+            <button class="w3-btn w3-small w3-theme-dark w3-hover-blue-gray">
+                <a href="@routes.HomeController.formPracticePage()">
+                    Check it out
+                </a>
+            </button>
+        }
 
-        @partials.tile(
-            heading = "this is a test",
-            introText = Some("Partials example Partials example Partials example Partials example Partials example Partials example Partials example")
-        )
+        @partials.tile(heading = "Configuration API") {
+            <ol>
+                <li>The Configuration API</li>
+            </ol>
+            <button class="w3-btn w3-small w3-theme-dark w3-hover-blue-gray">
+                <a href="@routes.HomeController.getConfigApiPage">
+                    Check it out
+                </a>
+            </button>
+        }
 
-        @partials.tile(
-            heading = "this is a test",
-            introText = Some("Partials example Partials example Partials example Partials example Partials example Partials example Partials example")
-        )
+        @partials.tile(heading = "Twirl templates") {
+            <ol>
+                <li>Templates syntax</li>
+                <li>Dependency Injection with Templates</li>
+                <li>Common use cases</li>
+                <li>Custom format</li>
+            </ol>
+            <button class="w3-btn w3-small w3-theme-dark w3-hover-blue-gray">
+                <a href="">
+                    TODO
+                </a>
+            </button>
+        }
+
+        @partials.tile(heading = "Mongo") {
+            <ol>
+                <li></li>
+                <li></li>
+            </ol>
+            <button class="w3-btn w3-small w3-theme-dark w3-hover-blue-gray">
+                <a href="">
+                    TODO
+                </a>
+            </button>
+        }
+
 
     </div>
 

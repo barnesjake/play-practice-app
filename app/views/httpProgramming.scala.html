@@ -1,0 +1,87 @@
+@()
+
+@main("Http programming page") {
+    @partials.sidebar()
+} {
+    @partials.header()
+
+    @partials.modal(
+        List(
+            Some("This application is to help me learn the Play framework using Scala"),
+            Some("It follows the documentation on the play website: https://www.playframework.com/documentation/2.7.x/ScalaHome"))
+    )
+
+    <div class="w3-row-padding w3-center">
+
+        @partials.tile(
+            heading = "Actions, controllers and Results",
+            tileSize = "half"
+        ) {
+            <div>
+                <button><a href="@routes.HttpProgrammingController.alert">Alert</a></button>
+                <button><a href="@routes.HttpProgrammingController.notFound">Page not found</a></button>
+                <button><a href="@routes.HttpProgrammingController.pageNotFound">Page not found with html</a></button>
+                <button><a href="@routes.HttpProgrammingController.oops">Internal server error</a></button>
+                <button><a href="@routes.HttpProgrammingController.anyStatus">Specific status</a></button>
+                <button><a href="@routes.HttpProgrammingController.redirect">Redirect</a></button>
+                <button><a href="@routes.HttpProgrammingController.redirectWithStatusCode">
+                    Redirect with status code</a></button>
+                <button><a href="@routes.HttpProgrammingController.redirectExample">Redirect example</a></button>
+            </div>
+        }
+
+        @partials.tile(
+            heading = "HTTP Routing",
+            tileSize = "half"
+        ) {
+            <div>
+                <button><a href="@routes.HttpProgrammingController.show(123456)">Routes with parameters</a></button>
+            </div>
+        }
+
+        @partials.tile(
+            heading = "Manipulating results",
+            tileSize = "half"
+        ) {
+
+        }
+
+        @partials.tile(
+            heading = "Session and Flash scopes",
+            tileSize = "half"
+        ) {
+
+        }
+
+        @partials.tile(
+            heading = "Body parsers",
+            tileSize = "half"
+        ) {
+
+        }
+
+        @partials.tile(
+            heading = "Action composition",
+            tileSize = "half"
+        ) {
+
+        }
+
+        @partials.tile(
+            heading = "Content negotiation",
+            tileSize = "half"
+        ) {
+
+        }
+
+        @partials.tile(
+            heading = "Handling errors",
+            tileSize = "half"
+        ) {
+
+        }
+
+    </div>
+
+
+}
