@@ -1,0 +1,3 @@
+@()(implicit flash: Flash)
+<h1>This is testing the flash partial!</h1>
+@flash.get("success").getOrElse("Welcome test!")

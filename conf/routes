@@ -4,27 +4,39 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET        /                                 controllers.HomeController.index
+GET         /                                             controllers.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file                     controllers.Assets.versioned(path="/public", file: Asset)
+GET         /assets/*file                                 controllers.Assets.versioned(path="/public", file: Asset)
 
-GET        /form-page                        controllers.HomeController.formPracticePage
-GET        /http-programming-page            controllers.HomeController.getHttpProgrammingPage
-GET        /adv-http-programming-page        controllers.HomeController.getAdvHttpProgrammingPage
-GET        /conf-api-page                    controllers.HomeController.getConfigApiPage
+GET         /form-page                                    controllers.HomeController.formPracticePage
+GET         /http-programming-page                        controllers.HomeController.getHttpProgrammingPage
+GET         /adv-http-programming-page                    controllers.HomeController.getAdvHttpProgrammingPage
+GET         /conf-api-page                                controllers.HomeController.getConfigApiPage
+GET         /twirl-playground-page                        controllers.HomeController.getTwirlTemplatesPage
 
 # http programming page
-GET        /http-programming-page/alert         controllers.HttpProgrammingController.alert
-GET        /http-programming-page/notFound      controllers.HttpProgrammingController.notFound
-GET        /http-programming-page/pageNotFound  controllers.HttpProgrammingController.pageNotFound
-GET        /http-programming-page/oops          controllers.HttpProgrammingController.oops
-GET        /http-programming-page/anyStatus     controllers.HttpProgrammingController.anyStatus
-GET        /http-programming-page/redirect      controllers.HttpProgrammingController.redirect
-GET        /http-programming-page/redirectAlt   controllers.HttpProgrammingController.redirectWithStatusCode
-GET        /http-programming-page/redirectExample   controllers.HttpProgrammingController.redirectExample
+GET         /http-programming-page/alert                  controllers.HttpProgrammingController.alert
+GET         /http-programming-page/notFound               controllers.HttpProgrammingController.notFound
+GET         /http-programming-page/pageNotFound           controllers.HttpProgrammingController.pageNotFound
+GET         /http-programming-page/oops                   controllers.HttpProgrammingController.oops
+GET         /http-programming-page/anyStatus              controllers.HttpProgrammingController.anyStatus
+GET         /http-programming-page/redirect               controllers.HttpProgrammingController.redirect
+GET         /http-programming-page/redirectAlt            controllers.HttpProgrammingController.redirectWithStatusCode
+GET         /http-programming-page/redirectExample        controllers.HttpProgrammingController.redirectExample
 
-GET         /clients/:id          controllers.HttpProgrammingController.show(id: Long)
+GET         /clients/:id                                  controllers.HttpProgrammingController.show(id: Long)
 
 +nocsrf
-POST        /clients/new          controllers.HttpProgrammingController.newClient(id: Long)
+POST        /clients/new                                  controllers.HttpProgrammingController.newClient(id: Long)
+
+GET         /manipulate-result-test                       controllers.HttpProgrammingController.manipulateResult1
+GET         /manipulate-cookies                           controllers.HttpProgrammingController.settingCookies
+GET         /session-set                                  controllers.HttpProgrammingController.setSessionData
+GET         /session-read                                 controllers.HttpProgrammingController.readSession
+GET         /session-clear                                controllers.HttpProgrammingController.clearSession
+GET         /flash-test                                   controllers.HttpProgrammingController.flashTest
+GET         /flash-save                                   controllers.HttpProgrammingController.flashSave
+GET         /flash-partial-test                           controllers.HttpProgrammingController.flashPartial
+
+GET         /json-test1                                   controllers.HttpProgrammingController.jsonBodyParser1

@@ -1,0 +1,13 @@
+@(users: List[UserData])
+<table class="w3-bordered w3-table w3-table">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    @for(user <- users) {
+        <tr>
+            <td>@user.name</td>
+            <td>@user.age</td>
+        </tr>
+    }
+</table>

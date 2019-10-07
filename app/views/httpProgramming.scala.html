@@ -43,21 +43,41 @@
             heading = "Manipulating results",
             tileSize = "half"
         ) {
-
+            <div>
+                <button><a href="@routes.HttpProgrammingController.manipulateResult1">
+                    Changing default content type</a></button>
+                <button><a href="@routes.HttpProgrammingController.settingCookies">Setting cookies</a></button>
+            </div>
         }
 
         @partials.tile(
             heading = "Session and Flash scopes",
             tileSize = "half"
         ) {
-
+            <div>
+                <h3>Session</h3>
+                <button><a href="@routes.HttpProgrammingController.setSessionData">Set session value</a></button>
+                <button><a href="@routes.HttpProgrammingController.readSession">Read session value</a></button>
+                <button><a href="@routes.HttpProgrammingController.clearSession">Clear session data</a></button>
+            </div>
+            <div>
+                <h3>Flash scope</h3>
+                <button><a href="@routes.HttpProgrammingController.flashTest">Flash test</a></button>
+                <button><a href="@routes.HttpProgrammingController.flashSave">Flash save test</a></button>
+                <button><a href="@routes.HttpProgrammingController.flashPartial">Flash test with partial</a></button>
+            </div>
         }
 
         @partials.tile(
             heading = "Body parsers",
             tileSize = "half"
         ) {
-
+            <div>
+                <button><a href="@routes.HttpProgrammingController.jsonBodyParser1">Test json parsing</a></button>
+                <button><a href=""></a></button>
+                <button><a href=""></a></button>
+                <button><a href=""></a></button>
+            </div>
         }
 
         @partials.tile(

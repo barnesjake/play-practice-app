@@ -1,0 +1,33 @@
+@()
+
+@main("Twirl template playground") {
+    @partials.sidebar()
+} {
+    @partials.header()
+
+    @partials.modal(
+        List(
+            Some("This application is to help me learn the Play framework using Scala"),
+            Some("It follows the documentation on the play website: https://www.playframework.com/documentation/2.7.x/ScalaHome"))
+    )
+
+    <div class="w3-row-padding w3-center">
+
+    @partials.tile(
+        heading = "Twirl template stuff"
+    ) {
+
+        @partials.listOfThings(
+            List(
+                UserData("bob", 1),
+                UserData("Ross", 2),
+                UserData("Donald", 99),
+                UserData("Drump", 142),
+            )
+        )
+
+    }
+
+    </div>
+
+}
